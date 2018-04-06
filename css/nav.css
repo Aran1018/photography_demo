@@ -1,10 +1,19 @@
 * {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    cursor: url('camera.ico'),default;
+
+}
+
+#css,#dev,#price,#package,#phone_number{
+    width: 85%;
+}
 
 body {
     width: 100vw;
     height: 100vh;
-    overflow: auto; }
+    overflow: auto;
+    cursor: url('camera.ico'),default;
+}
 
 body {
     padding: 2em 2em 2em 17em;
