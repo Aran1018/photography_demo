@@ -8,7 +8,7 @@ body {
 
 body {
     padding: 2em 2em 2em 17em;
-    font-size: 16px;
+    font-size: 1em;
     line-height: 1.6;
     font-family: 'Roboto', sans-serif; }
 
@@ -52,7 +52,7 @@ body {
 
 .contents {
     padding: 1em;
-    max-width: 800px;
+    max-width: 1600px;
     font-size: 1.4em;
     font-family: 'Frank Ruhl Libre', sans-serif; }
 .contents img {
@@ -75,7 +75,7 @@ body {
     margin-top: 1.2em; }
 .contents p {
     margin-top: 1.2em;
-    font-size: 1.8em;
+    font-size: 2em;
     line-height: 1.5em;
 }
 
