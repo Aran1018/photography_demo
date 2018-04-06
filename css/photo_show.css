@@ -3,7 +3,7 @@ html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fiel
     margin: 0;
     padding: 0;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 124px;
     color: #000;
     font-family: 'microsoft yahei', verdana, Tahoma;
 }
@@ -114,6 +114,7 @@ body {
     padding-top: 280px;
     line-height: 60px;
 }
+/*
 
 .logo {
     text-align: center;
@@ -177,6 +178,7 @@ body {
     position: relative;
     z-index: 1;
 }
+*/
 
 /*一级导航*/
 .nav-main {
@@ -278,11 +280,11 @@ body {
     -ms-transform: rotateY(-120deg);
     z-index: 99;
     visibility: hidden;
-    transform-origin: 100px 0;
-    -webkit-transform-origin: 100px 0;
-    -moz-transform-origin: 100px 0;
-    -o-transform-origin: 100px 0;
-    -ms-transform-origin: 100px 0;
+    transform-origin: 600px 0;
+    -webkit-transform-origin: 600px 0;
+    -moz-transform-origin: 600px 0;
+    -o-transform-origin: 600px 0;
+    -ms-transform-origin: 600px 0;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     transition: all .5s;
@@ -304,7 +306,7 @@ body {
 }
 
 /*二级菜单*/
-.nav-slide-o li a {
+.nav-slide-o li img {
     /*right: 240px;*/
     line-height: 50px;
     display: block;
@@ -319,7 +321,7 @@ body {
     -o-transition: all .5s;
 }
 
-.nav-slide-o li a:before {
+.nav-slide-o li img:before {
     content: '';
     position: absolute;
     left: -230%;
@@ -339,15 +341,15 @@ body {
     -o-transition: all .5s;
 }
 
-.nav-slide-o li a:hover {
+.nav-slide-o li img:hover {
     background: #357dd7;
 }
 
-.nav-slide-o li a:hover:before {
+.nav-slide-o li img:hover:before {
     left: -60px;
 }
 
-.nav-slide-o li a span {
+.nav-slide-o li img span {
     position: relative;
     z-index: 1;
 }
