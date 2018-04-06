@@ -15,14 +15,16 @@ body {
 .toc {
     position: fixed;
     left: 3em;
-    top: 5em;
+    top: 0em;
     padding: 1em;
     width: 14em;
     line-height: 2; }
 .toc ul {
     list-style: none;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    top: 5em;
+}
 .toc ul ul {
     padding-left: 2em; }
 .toc li a {
@@ -80,3 +82,4 @@ body {
 @media screen and (max-width: 1200px) {
     body {
         font-size: 14px; } }
+
