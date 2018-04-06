@@ -2,18 +2,19 @@
 html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td, textarea {
     margin: 0;
     padding: 0;
-    font-size: 20px;
-    line-height: 2em;
+    font-size: 1em;
+    line-height: 1.2em;
     color: #000;
     font-family: 'microsoft yahei', verdana, Tahoma;
 }
 
 ol, ul, li {
     list-style: none;
-    line-height: 50px;
+    line-height: 2em;
 }
 
 ol, ul {
+    font-size: 1.8em;
     zoom: 1;
 }
 
