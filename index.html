@@ -24,7 +24,61 @@
 </head>
 <!--JS滚轮插件代码粘贴在这里0.0-->
 <script>
-    !function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+    !function (a) {
+        "function" == typeof define && define.amd ? define(["jquery"], a) : "object" == typeof exports ? module.exports = a : a(jQuery)
+    }(function (a) {
+        function b(b) {
+            var g = b || window.event, h = i.call(arguments, 1), j = 0, l = 0, m = 0, n = 0, o = 0, p = 0;
+            if (b = a.event.fix(g), b.type = "mousewheel", "detail" in g && (m = -1 * g.detail), "wheelDelta" in g && (m = g.wheelDelta), "wheelDeltaY" in g && (m = g.wheelDeltaY), "wheelDeltaX" in g && (l = -1 * g.wheelDeltaX), "axis" in g && g.axis === g.HORIZONTAL_AXIS && (l = -1 * m, m = 0), j = 0 === m ? l : m, "deltaY" in g && (m = -1 * g.deltaY, j = m), "deltaX" in g && (l = g.deltaX, 0 === m && (j = -1 * l)), 0 !== m || 0 !== l) {
+                if (1 === g.deltaMode) {
+                    var q = a.data(this, "mousewheel-line-height");
+                    j *= q, m *= q, l *= q
+                } else if (2 === g.deltaMode) {
+                    var r = a.data(this, "mousewheel-page-height");
+                    j *= r, m *= r, l *= r
+                }
+                if (n = Math.max(Math.abs(m), Math.abs(l)), (!f || f > n) && (f = n, d(g, n) && (f /= 40)), d(g, n) && (j /= 40, l /= 40, m /= 40), j = Math[j >= 1 ? "floor" : "ceil"](j / f), l = Math[l >= 1 ? "floor" : "ceil"](l / f), m = Math[m >= 1 ? "floor" : "ceil"](m / f), k.settings.normalizeOffset && this.getBoundingClientRect) {
+                    var s = this.getBoundingClientRect();
+                    o = b.clientX - s.left, p = b.clientY - s.top
+                }
+                return b.deltaX = l, b.deltaY = m, b.deltaFactor = f, b.offsetX = o, b.offsetY = p, b.deltaMode = 0, h.unshift(b, j, l, m), e && clearTimeout(e), e = setTimeout(c, 200), (a.event.dispatch || a.event.handle).apply(this, h)
+            }
+        }
+
+        function c() {
+            f = null
+        }
+
+        function d(a, b) {
+            return k.settings.adjustOldDeltas && "mousewheel" === a.type && b % 120 === 0
+        }
+
+        var e, f, g = ["wheel", "mousewheel", "DOMMouseScroll", "MozMousePixelScroll"],
+            h = "onwheel" in document || document.documentMode >= 9 ? ["wheel"] : ["mousewheel", "DomMouseScroll", "MozMousePixelScroll"],
+            i = Array.prototype.slice;
+        if (a.event.fixHooks) for (var j = g.length; j;) a.event.fixHooks[g[--j]] = a.event.mouseHooks;
+        var k = a.event.special.mousewheel = {
+            version: "3.1.12", setup: function () {
+                if (this.addEventListener) for (var c = h.length; c;) this.addEventListener(h[--c], b, !1); else this.onmousewheel = b;
+                a.data(this, "mousewheel-line-height", k.getLineHeight(this)), a.data(this, "mousewheel-page-height", k.getPageHeight(this))
+            }, teardown: function () {
+                if (this.removeEventListener) for (var c = h.length; c;) this.removeEventListener(h[--c], b, !1); else this.onmousewheel = null;
+                a.removeData(this, "mousewheel-line-height"), a.removeData(this, "mousewheel-page-height")
+            }, getLineHeight: function (b) {
+                var c = a(b), d = c["offsetParent" in a.fn ? "offsetParent" : "parent"]();
+                return d.length || (d = a("body")), parseInt(d.css("fontSize"), 10) || parseInt(c.css("fontSize"), 10) || 16
+            }, getPageHeight: function (b) {
+                return a(b).height()
+            }, settings: {adjustOldDeltas: !0, normalizeOffset: !0}
+        };
+        a.fn.extend({
+            mousewheel: function (a) {
+                return a ? this.bind("mousewheel", a) : this.trigger("mousewheel")
+            }, unmousewheel: function (a) {
+                return this.unbind("mousewheel", a)
+            }
+        })
+    });
 </script>
 
 <!--JS滚轮插件代码粘贴在这里0.0-->
@@ -63,21 +117,16 @@
             <a href="#player">主页</a>
         </li>
         <li>
-            <a href="#dev">我们是谁</a>
+            <a href="#we">我们是谁</a>
         </li>
         <li>
-            <a href="#css">照片展</a>
-            <ul>
-                <li><a href="#css-1">Custom Fonts</a></li>
-                <li><a href="#css-2">Developer Mode</a></li>
-                <li><a href="#css-3">Examples</a></li>
-            </ul>
+            <a href="#img">照片展</a>
         </li>
         <li>
             <a href="#price">价格标准</a>
         </li>
         <li>
-            <a href="#price">优惠套餐</a>
+            <a href="#package">优惠套餐</a>
         </li>
         <li>
             <a href="#phone_number">联系电话</a>
@@ -139,7 +188,7 @@
             <!--<div class="nav-slide-o" style="position:absolute; height:100%;  width:200px;overflow-y:scroll">-->
             <div class="nav-slide-o" style="position:absolute; height:100%;  width:600px;overflow-y:scroll">
 
-            <ul style="width: 580px">
+                <ul style="width: 580px">
                     <li class="photo"><img src="img/show_photo/3.jpg"></li>
                     <li class="photo"><img src="img/show_photo/3.jpg"></li>
                     <li class="photo"><img src="img/show_photo/3.jpg"></li>
@@ -171,7 +220,7 @@
         <a id="title"></a>
     </header>
     <section>
-        <div id="dev">
+        <div id="we">
             <h2>我们是谁</h2>
             <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;私•印象旅拍婚拍摄影部落是坐落于东京的日本本地摄影公司。公司以英文“Clan”（部落）定义，旨在打破传统摄影工作室包装的概念，用“同类平等”的姿态寻觅和我们一样爱好摄影、享受拍照、珍惜缤纷生活的人士，以各取所长、合作共赢的形式实现共同为时光留下永恒记忆的目标。
@@ -181,134 +230,22 @@
             </p>
         </div>
 
-        <div id="css">
-            <h2>CSS Editor </h2>
-            <p>
-                The CSS editor lets you author custom styles for your presentation with a real-time preview of the
-                result. It's available as an option inside of the Style panel of the presentation editor.
-            </p>
-            <p>
-                The editor preprocesses styles using <a href="http://lesscss.org/">LESS</a>, though you're free to write
-                plain CSS as well. We apply the styles in real-time as you type so there's no need to leave the editor
-                or even press a refresh button to see what you're getting. Note that when your styles are saved they
-                will be automatically wrapped in a ".reveal {}" selector to avoid conflicts with other page styles.
-            </p>
-            <div id="css-1">
-                <h2>CSS Editor </h2>
-                <p>
-                    The CSS editor lets you author custom styles for your presentation with a real-time preview of the
-                    result. It's available as an option inside of the Style panel of the presentation editor.
-                </p>
-                <p>
-                    The editor preprocesses styles using <a href="http://lesscss.org/">LESS</a>, though you're free to
-                    write plain CSS as well. We apply the styles in real-time as you type so there's no need to leave
-                    the editor or even press a refresh button to see what you're getting. Note that when your styles are
-                    saved they will be automatically wrapped in a ".reveal {}" selector to avoid conflicts with other
-                    page styles.
-                </p>
-            </div>
-            <div id="css-2">
-                <h2>CSS Editor </h2>
-                <p>
-                    The CSS editor lets you author custom styles for your presentation with a real-time preview of the
-                    result. It's available as an option inside of the Style panel of the presentation editor.
-                </p>
-                <p>
-                    The editor preprocesses styles using <a href="http://lesscss.org/">LESS</a>, though you're free to
-                    write plain CSS as well. We apply the styles in real-time as you type so there's no need to leave
-                    the editor or even press a refresh button to see what you're getting. Note that when your styles are
-                    saved they will be automatically wrapped in a ".reveal {}" selector to avoid conflicts with other
-                    page styles.
-                </p>
-            </div>
-            <div id="css-3">
-                <h2>CSS Editor </h2>
-                <p>
-                    The CSS editor lets you author custom styles for your presentation with a real-time preview of the
-                    result. It's available as an option inside of the Style panel of the presentation editor.
-                </p>
-                <p>
-                    The editor preprocesses styles using <a href="http://lesscss.org/">LESS</a>, though you're free to
-                    write plain CSS as well. We apply the styles in real-time as you type so there's no need to leave
-                    the editor or even press a refresh button to see what you're getting. Note that when your styles are
-                    saved they will be automatically wrapped in a ".reveal {}" selector to avoid conflicts with other
-                    page styles.
-                </p>
-            </div>
+        <div id="img">
+            <h2>照片展</h2>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
         <div id="price">
-            <h3>Custom Fonts</h3>
-            <p>
-                You can load custom fonts from Typekit and Google fonts and apply them using custom CSS.
-            </p>
+            <h2>价格标准 </h2>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
         <div id="package">
-            <h3>Developer Mode</h3>
-            <p>
-                If you turn on the <a href="#package">developer mode</a> you can also add custom classes to any focused
-                element. This is a convenient way to easily apply your CSS to specific elements.
-            </p>
+            <h2>优惠套餐</h2>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
-
         <div id="phone_number">
-            <h3>Examples</h3>
-            <pre class="code-block" data-highlight-theme="github-gist"><code class="hljs css">// Change presentation background
-&amp; {
-		background: #a83239;
-}
-
-// Change color of body text
-.slides {
-		color: #009999;
-}
-
-// Turn text white if the slide has a dark background
-.has-dark-background {
-		color: #fff;
-}
-
-// Add a blue border to all slides (each slide is a &lt;section&gt;)
-.slides section {
-		outline: 1px solid blue;
-}
-
-// Add a red border to all vertical stacks of slides
-.slides section.stack {
-		outline: 1px solid red;
-}<br>
-// Include a custom font<br>@font-face {<br>&nbsp; font-family: "Cabin Sketch";<br>&nbsp; src: url("https://s3.amazonaws.com/static.slid.es/fonts/cabinsketch/cabinsketch-regular.woff") format("woff"),<br>&nbsp; &nbsp; &nbsp; &nbsp;url("https://s3.amazonaws.com/static.slid.es/fonts/cabinsketch/cabinsketch-regular.ttf") format("truetype");<br>}
-<br>.slides h1, .slides h2, .slides h3 {<br>&nbsp; &nbsp; font-family: "Cabin Sketch";<br>}
-
-
-// Change color of controls and progress bar
-﻿@interactiveColor: rgb(200,105,119);
-
-.progress span {
-		background: @interactiveColor !important;
-}
-
-.controls .navigate-left {
-		border-right-color: @interactiveColor !important;
-}
-.controls .navigate-right {
-		border-left-color: @interactiveColor !important;
-}
-.controls .navigate-up {
-		border-bottom-color: @interactiveColor !important;
-}
-.controls .navigate-down {
-		border-top-color: @interactiveColor !important;
-}</code></pre>
+            <h2>联系电话</h2>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
-
-        <p>Here's where you can access the CSS editor from inside of the Style panel:</p>
-        <img class="developer-image"
-             src="https://s3.amazonaws.com/static.slid.es/site/developers/slides-css-editor-1.png">
-
-        <p>A screenshot of the editor:</p>
-        ﻿<img class="developer-image"
-              src="https://s3.amazonaws.com/static.slid.es/site/developers/slides-css-editor-2.png">
-
     </section>
 </article>
 
