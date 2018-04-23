@@ -1,0 +1,467 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--播放器css-->
+    <link rel="stylesheet" href="dist/plyr.css">
+    <!--自定义主页css-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--图片展示css-->
+    <link rel="stylesheet" href="css/photo_show.css">
+    <!--导航-->
+    <link rel="stylesheet" href="css/nav.css">
+    <!--滚动锁定-->
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+
+    <!--///////////////-->
+    <style>
+        /* Style for our header texts
+        * --------------------------------------- */
+        h1{
+            font-size: 5em;
+            font-family: arial,helvetica;
+            color: #fff;
+            margin:0;
+            padding:0;
+        }
+
+        /* Centered texts in each section
+        * --------------------------------------- */
+        .section{
+            text-align:center;
+        }
+
+
+        /* Backgrounds will cover all the section
+        * --------------------------------------- */
+        #section1,
+        #section2,
+        #section3{
+            background-size: cover;
+        }
+
+        /* Defining each section background and styles
+        * --------------------------------------- */
+        #section1{
+            background-image: url(imgs/bg1.jpg);
+        }
+        #section2{
+            background-image: url(imgs/bg2.jpg);
+            padding: 6% 0 0 0;
+        }
+        #section3{
+            background-image: url(imgs/bg3.jpg);
+            padding: 6% 0 0 0;
+        }
+        #section3 h1{
+            color: #000;
+        }
+
+
+
+        #section1 h1{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+            color: #fff;
+        }
+
+        #section2 .intro{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 30px;
+        }
+        #section2 h1,
+        #section2 p{
+            text-shadow: 1px 5px 20px #000;
+        }
+
+        #section3 h1,
+        #section3 p{
+            text-shadow: 1px 5px 20px #000;
+            color: #fff;
+        }
+    </style>
+    <!--///////////////-->
+
+</head>
+
+<body>
+
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+    your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+
+<!--
+-->
+
+
+
+<!--导航-->
+<nav class="toc">
+    <img src="img/1670034136.jpg" alt="" width="40px" height="40px" style="margin-bottom: 50px"><a
+    style="font-size: 20px ;margin-bottom: 20px; margin-left: 10px"><strong>私 • 印象</strong></a>
+    <!--<ul>-->
+        <!--<li>-->
+            <!--<a href="#player">ホームページ·主页·Homepage</a>-->
+        <!--</li>-->
+        <!--<li><a href="#js">日本語</a>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<a href="#js_we">私・印象とは</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#js_img">写真展</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#js_price">料金コース</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#js_package">おトクコース</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#js_phone_number">連絡方法</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li><a href="#zn">中文</a>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<a href="#zn_we">我们是谁</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#zn_img">照片展</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#zn_price">价格标准</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#zn_package">优惠套餐</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#zn_phone_number">联系电话</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li><a href="#en">English</a>-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<a href="#en_we">Who Are We</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#en_img">Photos</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#en_price">Charging Scale</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#en_package">Sales</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<a href="#en_phone_number">Contact Us</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+    <!--</ul>-->
+
+    <svg class="toc-marker" width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <path stroke="#444" stroke-width="3" fill="transparent" stroke-dasharray="0, 0, 0, 1000" stroke-linecap="round"
+              stroke-linejoin="round" transform="translate(-0.5, -0.5)"/>
+    </svg>
+</nav>
+
+
+<!--测试文本-->
+<ul id="menu">
+    <li data-menuanchor="page1" class="active"><a href="#section1">Page 1</a></li>
+    <li data-menuanchor="page2"><a href="#section2">Page 2</a></li>
+    <li data-menuanchor="page3"><a href="#section3">Page 3</a></li>
+</ul>
+
+    <div id="pp-nav" style="color: rgb(0, 0, 0); margin-top: -33.5px;" class="right"><ul><li data-tooltip="section1"><a href="#page1" class="active"><span style="border-color: rgb(0, 0, 0);"></span></a></li><li data-tooltip="section2"><a href="#page2" class=""><span style="border-color: rgb(0, 0, 0);"></span></a></li><li data-tooltip="section3"><a href="#page3" class=""><span style="border-color: rgb(0, 0, 0);"></span></a></li></ul></div>
+<!--测试文本-->
+    <div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+
+
+    <!--//////////////////////-->
+
+<article class="contents">
+    <header>
+        <a id="title"></a>
+    </header>
+    <section>
+
+        <div id="pagepiling" >
+    <div class="section" id="section1">
+        <!--播放器-->
+        <div id="player">
+            <video poster="img/vs.png" controls id="video">
+                <source src="video/4.mp4" type="video/mp4">
+                <!-- <source src="/path/to/video.webm" type="video/webm">-->
+                <!-- Captions are optional -->
+            </video>
+            <!--<script>plyr.setup();</script>-->
+        </div>
+
+    </div>
+    <!--//////////////////-->
+    <div class="section" id="section2">
+        <!--<div class="intro">-->
+                    <h3>私・印象とは</h3>
+        <p>
+            私・印象記念写真撮影クランは東京に位置している日本本土の写真会社です。本会社は英文の“Clan”(部落)に命名し、伝統的なスタジオの包装式の撮影タイプを破ることと目指し、“同類平等”の態度により私たちと同じ撮影ラビング、写真ラビング、素敵な生活が大切している人々を探します。本会社の目標は、歳月と伴い様々なお客様と一緒に永遠の記憶を創造するのです。
+        </p>
+
+    </div>
+    <!--//////////////////-->
+        <div class="section" id="section3">
+            <!--<div class="intro">-->
+            <p>
+                伝統的なスタジオの包装式の撮影タイプの単一感と受動感をパスするので、毎人のお客様は私・印象で本格的な同類平等の写真交流の感じが体験でき、そして自分の特定“私・印象”をもらえます。
+            </p>
+
+            </div>
+        <!--</div>-->
+        <!--////////////////////-->
+        <div class="section" id="section4">
+            <!--<div class="intro">-->
+            <div id="js_img">
+                <h3>写真展</h3>
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+
+            </div>
+                <div id="js_price">
+                    <h3>料金コース</h3>
+                    <img src="img/price_js.png" height=416 width="1263"/>
+                    <img src="img/price_zn.png" height="457" width="1263"/>
+                    <img src="img/price_en.png" height=568 width="1340"/>
+                </div>
+            </div>
+        <!--</div>-->
+<!--</div>-->
+
+<!--测试文本-->
+
+
+
+
+
+
+            <div id="js_package">
+                <h3>おトクコース</h3>
+                <br><br><br><br><br><br>
+            </div>
+            <div id="js_phone_number">
+                <h3>連絡方法</h3>
+                <p>
+                    地址：########################
+                </p>
+                <p>
+                    電話：########################
+                </p>
+            </div>
+        </div>
+        <div id="zn">
+            <div id="zn_we">
+                <h3>我们是谁</h3>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;私•印象旅拍婚拍摄影部落是坐落于东京的日本本地摄影公司。公司以英文“Clan”（部落）定义，旨在打破传统摄影工作室包装的概念，用“同类平等”的姿态寻觅和我们一样爱好摄影、享受拍照、珍惜缤纷生活的人士，以各取所长、合作共赢的形式实现共同为时光留下永恒记忆的目标。
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于摒除了传统工作室包装时的单调与被动感，每一位客人都可以在私•印象真正体验到顾客至上的服务态度和同类平等的拍照交流，享受珍藏属于自己的旅行“私•印象”。
+                </p>
+            </div>
+
+            <div id="zn_img">
+                <h3>照片展</h3>
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+
+            </div>
+            <div id="zn_price">
+                <h3>价格标准 </h3>
+                <img src="img/price_js.png" height=416 width="1263"/>
+                <img src="img/price_zn.png" height="457" width="1263"/>
+                <img src="img/price_en.png" height=568 width="1340"/>
+            </div>
+            <div id="zn_package">
+                <h3>优惠套餐</h3>
+                <br><br><br><br><br><br>
+            </div>
+            <div id="zn_phone_number">
+                <h3>联系电话</h3>
+                <p>
+                    地址：########################
+                </p>
+                <p>
+                    电话：########################
+                </p>
+            </div>
+        </div>
+        <div id="en">
+            <div id="en_we">
+                <h3>Who Are We</h3>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MINE Photography Clan (MPC) is a native Japanese photography company, which is located in Tokyo. We name our company “Clan” because our aim is to overcome and break the traditional concept of taking photos for guests --- Polishing in Studio, instead, we would like to seek people who love shooting, enjoy being memorized and cherishing the fantastic life and we regard them as our same clan. As a consequence, we devote ourselves to the memories which are made by both our guests and our company in the hasty years.
+                </p>
+                <p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Since we have thrown the dull and passive feeling of the traditional photographing type, every guest in MPC can have a real experience on communication about photography art with your photographer, stylist and cosmetician on an equal platform as well as on our hospitable service.
+                </p>
+            </div>
+
+            <div id="en_img">
+                <h3>Photos</h3>
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+                <img class="picture" src="img/show_photo/3.jpg">
+
+            </div>
+            <div id="en_price">
+                <h3>Charging Scale</h3>
+                <img src="img/price_js.png" height=416 width="1263"/>
+                <img src="img/price_zn.png" height="457" width="1263"/>
+                <img src="img/price_en.png" height=568 width="1340"/>
+            </div>
+            <div id="en_package">
+                <h3>Sales</h3>
+                <br><br><br><br><br><br>
+            </div>
+            <div id="en_phone_number">
+                <h3>Contact Us</h3>
+                <p>
+                    address：########################
+                </p>
+                <p>
+                    telephone：########################
+                </p>
+            </div>
+        </div>
+    </section>
+</article>
+
+<!--<script src="script.js"></script>-->
+
+
+<style type="text/css" media="screen">
+    .credits {
+        position: fixed;
+        left: 3em;
+        bottom: 4em;
+        font-size: 1em;
+        z-index: 20;
+        color: #444;
+        vertical-align: middle;
+    }
+
+    .credits * + * {
+        margin-top: 15px;
+    }
+
+    .credits a {
+        display: block;
+        padding: 8px 10px;
+        color: #777;
+        border: 2px solid #bbb;
+        background: #fff;
+        text-decoration: none;
+    }
+
+    .credits a:hover {
+        border-color: #555;
+        color: #222;
+    }
+
+    @media screen and (max-height: 700px) {
+        .credits {
+            display: none;
+        }
+    }
+</style>
+<!--测试文本-->
+<!--测试文本-->
+<!--测试文本-->
+
+
+<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+<script src="js/jquery-3.2.1.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<!--播放器js-->
+<script src="dist/plyr.js"></script>
+<!--图片展示js-->
+<!--<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>-->
+<script src="js/photo_show/photo_show.js"></script>
+<script src="js/photo_show/jquery-1.9.1.min.js"></script>
+<script src="js/nav/nav.js"></script>
+<!--锁定-->
+<script src="js/jquery_1.8.3_jquery.js"></script>
+<script type="text/javascript" src="js/lock/jquery.pagepiling.js"></script>
+<script >
+
+    var deleteLog = false;
+
+    $(document).ready(function() {
+        $('#pagepiling').pagepiling({
+            menu: '#menu',
+            anchors: ['page1', 'page2', 'page3']
+        });
+    });
+
+</script>
+
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+    window.ga = function () {
+        ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+    ga('send', 'pageview')
+</script>
+<script src="js/analytics.js" async defer></script>
+</body>
+</html>
