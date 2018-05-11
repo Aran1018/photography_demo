@@ -187,8 +187,8 @@ body {
     z-index: 12;
     height: 100%;
     /*更改位置*/
-    right: 0;
-    width: 100px;
+    right: 0px;
+    width: 150px;
     color: #fff;
     background: #111213;
 }
@@ -199,7 +199,7 @@ body {
 
 .nav-box {
     position: relative;
-    perspective: 200px;
+    perspective: 1200px;
     -webkit-perspective: 2000px;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
@@ -209,7 +209,7 @@ body {
 
 .nav-ul li a {
     display: block;
-    width: 100px;
+    width: 150px;
     height: 100px;
     overflow: hidden;
     text-align: center;
@@ -268,7 +268,7 @@ body {
 
 .nav-slide {
     position: fixed;
-    right: 100px;
+    right: 150px;
     top: 0;
     width: 120px;
     height: 100%;
