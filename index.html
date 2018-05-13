@@ -19,10 +19,12 @@
 		var deleteLog = false;
 
 		$(document).ready(function() {
-	    	$('#pagepiling').pagepiling({
-	    		menu: '#menu',
-	    		anchors: ['section1', 'section2', 'section3','section4','section5','section6']
-			});
+            $('#pagepiling').pagepiling({
+                menu: '#menu',
+                loopBottom:false,
+                keyboardScrolling:true,
+                position: ['section1', 'section2', 'section3','section4','section5','section6']
+            });
 	    });
     </script>
 
